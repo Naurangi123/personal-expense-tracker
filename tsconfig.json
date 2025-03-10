@@ -13,8 +13,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",  // Sets the base directory to resolve non-relative modules.
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"],  // This will allow imports like "@/styles/globals.css"
+      "@styles/*": ["src/styles/*"],
+      "@components/*": ["src/components/*"] 
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
